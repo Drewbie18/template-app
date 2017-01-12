@@ -1,6 +1,14 @@
 const express = require('express');
 var app = express();
 
+//setup morgan to write log to console. 
+var morgan = require('morgan');
+app.use(morgan('combined'));
+//setup morgan to write to log files
+var morganLogFile = require('./server/config/morganConfig');
+morganLogFile(app);
+
+
 var port = process.env.port || 3001;
 
 
