@@ -1,7 +1,7 @@
 /**
  * Created by payetted on 1/12/2017.
  */
-var log4js = require('./server/config/logConfig');
+var log4js = require('./server/config/log4jsConfig');
 var logger = log4js.getLogger('general');
 
 

@@ -23,7 +23,7 @@ var conf = {
             type: 'file',
             filename: logPath + '\\general.log',
             category: 'general',
-            maxLogSize: 20480,
+            maxLogSize: 10*1024*1024, //10megabits
             backups: 3,
             setLevel: 'trace'
         }
