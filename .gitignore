@@ -1,0 +1,11 @@
+
+.idea
+
+node_modules
+\reports\
+log
+logs
+*.csv
+*.log
+.metadata
+
