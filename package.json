@@ -4,7 +4,8 @@
   "description": "a basic mean stack template",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha **/*.test.js",
+    "test-watch": "nodemon --exec \"npm test\""
   },
   "author": "Drew Payette",
   "license": "MIT",
@@ -18,5 +19,8 @@
     "file-stream-rotator": "0.0.7",
     "log4js": "^0.6.38",
     "morgan": "^1.7.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.1.2"
   }
 }
