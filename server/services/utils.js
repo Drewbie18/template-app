@@ -36,3 +36,14 @@ module.exports.asyncFetch = function (name, callback) {
 
 
 };
+
+function toBeReplaced() {
+    console.log('I should have been replaced');
+}
+
+module.exports.spyTest = function () {
+
+    //calls the function.
+    toBeReplaced();
+
+};
