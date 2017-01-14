@@ -21,6 +21,21 @@ app.get('/', function (req, res) {
     res.sendFile(__dirname + '/client/public/index.html');
 });
 
+app.get('/api/v1/sample', function (req, res) {
+
+    var data = {
+        firstName: 'Drew',
+        lastName: 'Payette'
+    }
+
+    res.send(data);
+
+});
+
 
 console.log('app is listening on port', port);
 app.listen(port);
+
+
+//for super test we export the express app so it can be used in the test files
+module.exports.app = app;
