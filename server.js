@@ -3,7 +3,7 @@ var app = express();
 
 //setup morgan to write log to console. 
 var morgan = require('morgan');
-app.use(morgan('combined'));
+app.use(morgan('dev'));
 //setup morgan to write to log files
 var morganLogFile = require('./server/config/morganConfig');
 morganLogFile(app);
