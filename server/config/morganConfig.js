@@ -7,7 +7,9 @@ const fs = require('fs');
 var morgan = require('morgan');
 //create relative path for log files
 const path = require('path');
-var logPath = path.join(__dirname + '..\\..\\logs');
+var appRoot = require('app-root-path');
+
+var logPath = path.join(appRoot.path + '/server/logs');
 
 
 //------------Config Variables for morgan------------//

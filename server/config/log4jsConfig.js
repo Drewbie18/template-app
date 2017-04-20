@@ -5,14 +5,15 @@
  * this project require this file rather than log4js itself.
  *
  * ##Not sure if this will scale.##
- 
+
  */
 
 var log4js = require('log4js');
 
 //create relative path function for this project setup
 const path = require('path');
-var logPath = path.join(__dirname + '..\\..\\logs');
+var appRoot = require('app-root-path');
+var logPath = path.join(appRoot.path + '/server/logs');
 
 //configure appenders.
 var conf = {
@@ -23,7 +24,7 @@ var conf = {
             type: 'file',
             filename: logPath + '\\general.log',
             category: 'general',
-            maxLogSize: 10*1024*1024, //10megabits
+            maxLogSize: 10 * 1024 * 1024, //10megabits
             backups: 3,
             setLevel: 'trace'
         }
